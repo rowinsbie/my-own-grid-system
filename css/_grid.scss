@@ -1,0 +1,48 @@
+.container {
+    max-width: 80%;
+    margin: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 16px;
+    margin: 0 auto;
+}
+
+//  grid system for large screen
+@for $i from 1 through 12 {
+    .col-lg-#{$i} {
+        grid-column: span $i;
+    }
+}
+
+//  grid system for small screen
+@media only screen and (max-width: 576px) {
+   @for $i from 1 through 12 {
+        .col-sm-#{$i} {
+            grid-column: span $i;
+        }
+   }
+}
+
+//  grid system for medium screen
+@media only screen and (max-width: 768px) {
+    @for $i from 1 through 12 {
+         .col-md-#{$i} {
+             grid-column: span $i;
+         }
+    }
+ }
+
+
+ //  grid system for medium screen
+@media only screen and (max-width: 1180px) {
+    @for $i from 1 through 12 {
+         .col-md-#{$i} {
+             grid-column: span $i;
+         }
+    }
+ }
+
+

@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+@import 'grid';
+@import 'util';
+@import 'colors';
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    font-family: 'Rubik', sans-serif;
+
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Rubik', sans-serif;
+
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+
+p {
+    font-size: 1.4rem;
+    color: $paragraph;
+}
+
+.nav-bg {
+    background-color: $primary;
+    transition: background-color 1.3s ease-out;
+}
+
+header{
+    background-color: none;
+    padding: 1rem;
+    color: $white;
+    z-index: 99;
+    nav {
+        .menu-mobile-nav {
+            display: none;
+        }
+        @media only screen and (max-width: 576px) {
+            .menu-mobile-nav {
+                display: inline-block;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                margin-top: 0.5rem;
+                .bx {
+                    font-size: 2rem;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .nav-group {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            
+            li {
+               list-style: none;
+            }
+            @media only screen and (max-width: 576px) {
+                display: none;
+            }
+        }
+      
+        a {
+            color: $white;
+            text-decoration: none;
+            padding: 0rem 1rem;
+        }
+
+        a:hover {
+            border-bottom: 1px solid $secondary;
+            color:$secondary;
+            padding-bottom: 1rem;
+        }
+    }
+}
+
+
+
+.hide {
+    display: none;
+}
+
+.main {
+    background: url('./../images/bg.jpg');
+    background-size: cover;
+    height: auto;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    
+}
+
+@media only screen and (max-width: 576px),only screen and (max-width: 768px),only screen and (max-width: 1180px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.2rem;
+    }
+    
+    
+    p {
+        font-size: 1.1rem;
+        color: $paragraph;
+    }
+
+    .open-nav {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        top: 0 ;
+        bottom: 0;
+        width: 60%;
+        background-color: $primaryv2;
+    }
+
+}
+
